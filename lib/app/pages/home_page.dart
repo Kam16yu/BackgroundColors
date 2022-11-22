@@ -35,8 +35,10 @@ class _HomePageState extends State<HomePage> {
           child: Text(
             style: TextStyle(
               fontSize: fontSize,
-              color: Color(Colors.white.value - backgroundColor.value +
-                  Colors.black.value,),),
+              color: Color(
+                Colors.white.value - backgroundColor.value + Colors.black.value,
+              ),
+            ),
             'Hey there',
           ),
         ),

@@ -7,19 +7,23 @@ void main() {
     // Build app and trigger a frame
     await tester.pumpWidget(const Main());
 
-    expect(find.byWidgetPredicate(
+    expect(
+      find.byWidgetPredicate(
         (Widget widget) =>
             widget is Scaffold && widget.backgroundColor == Colors.white,
-      ), findsOneWidget,
+      ),
+      findsOneWidget,
     );
     await tester.tap(find.text('Hey there'));
     // Wait for screen to update until no new frames are scheduled
     await tester.pumpAndSettle();
     // Check color changing
-    expect(find.byWidgetPredicate(
-          (Widget widget) =>
-      widget is Scaffold && widget.backgroundColor != Colors.white,
-    ), findsOneWidget,
+    expect(
+      find.byWidgetPredicate(
+        (Widget widget) =>
+            widget is Scaffold && widget.backgroundColor != Colors.white,
+      ),
+      findsOneWidget,
     );
     expect(find.text('Hey there'), findsOneWidget);
   });
