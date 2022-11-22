@@ -1,9 +1,5 @@
-# flutter_project_template
-📖 Template for flutter projects using solid_lints, CI for tests and analysis.
-
-- Uses latest stable flutter
-- Repo name as your project name
-- Organization from your profile email address or default
+# BackgroundColors
+[![style: solid](https://img.shields.io/badge/style-solid-orange)](https://pub.dev/packages/solid_lints)
 
 # Usage
 1. Press "Use this template" on the menu.
