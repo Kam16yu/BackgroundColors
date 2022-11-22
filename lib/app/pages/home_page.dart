@@ -11,15 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Color? backgroundColor;
-  final double textBorderRounding = 10.0;
-
-  @override
-  void initState() {
-    super.initState();
-    //Setting random color when run app
-    backgroundColor = randomColorGenerator();
-  }
+  Color backgroundColor = Colors.white;
+  final double fontSize = 25.0;
 
   @override
   Widget build(BuildContext context) {
@@ -28,22 +21,23 @@ class _HomePageState extends State<HomePage> {
       body: GestureDetector(
         //Detecting tap
         behavior: HitTestBehavior.opaque,
-        onTap: () => {
+        onTap: () {
+          Color applyColor = randomColorGenerator();
+          while (backgroundColor == applyColor) {
+            applyColor = randomColorGenerator();
+          }
           setState(() {
-            backgroundColor = randomColorGenerator();
-          })
+            backgroundColor = applyColor;
+          });
         },
+        //Text in the middle of the screen
         child: Center(
-          child: Card(
-            color: Colors.lightBlueAccent,
-            shape: RoundedRectangleBorder(
-              side: const BorderSide(),
-              borderRadius: BorderRadius.circular(textBorderRounding),
-            ),
-            child: const Text(
-              style: TextStyle(fontSize: 20.0),
-              'Hey there',
-            ),
+          child: Text(
+            style: TextStyle(
+              fontSize: fontSize,
+              color: Color(Colors.white.value - backgroundColor.value +
+                  Colors.black.value,),),
+            'Hey there',
           ),
         ),
       ),
