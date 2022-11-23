@@ -14,7 +14,6 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Random background color',
-      // Theme of application
       theme: ThemeData(
         primarySwatch: Colors.cyan,
       ),

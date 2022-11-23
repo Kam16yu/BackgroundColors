@@ -33,13 +33,13 @@ class _HomePageState extends State<HomePage> {
         //Text in the middle of the screen
         child: Center(
           child: Text(
+            'Hey there',
             style: TextStyle(
               fontSize: fontSize,
               color: Color(
                 Colors.white.value - backgroundColor.value + Colors.black.value,
               ),
             ),
-            'Hey there',
           ),
         ),
       ),
