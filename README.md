@@ -1,5 +1,6 @@
 # BackgroundColors
 [![style: solid](https://img.shields.io/badge/style-solid-orange)](https://pub.dev/packages/solid_lints)
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
 Simple app, set random colored background after tapping. Implemented solid_lints for testing and CI using GitHub Actions
 
